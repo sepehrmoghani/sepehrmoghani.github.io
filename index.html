@@ -1,14 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
-      <h1>Sepehr Moghani</h1>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">Sepehr Moghani</a>
+      </div>
+      <div class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title animate-fade-in-up">
+            Hi, I'm Sepehr
+          </h1>
+          <h2 class="hero-subtitle animate-fade-in-up delay-200">Data Science Student</h2>
+          <p class="hero-description animate-fade-in-up delay-300">
+            Passionate about transforming data into actionable insights.
+            Currently pursuing advanced studies in data science with focus on
+            machine learning, statistical analysis, and data visualization.
+          </p>
+          <div class="hero-buttons animate-fade-in-up delay-400">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/profile-placeholder.svg" alt="Profile Picture" class="profile-img animate-float">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-description">
+            I am a dedicated data science student with a strong foundation in mathematics,
+            statistics, and programming. My journey in data science began with a fascination
+            for uncovering patterns in complex datasets and has evolved into a comprehensive
+            skill set spanning machine learning, data visualization, and statistical modeling.
+          </p>
+          <p class="about-description">
+            Currently pursuing my degree while working on real-world projects that demonstrate
+            my ability to extract meaningful insights from data. I'm particularly interested
+            in applications of machine learning in healthcare, finance, and environmental science.
+          </p>
+          <div class="about-stats">
+            <div class="stat animate-slide-in delay-100">
+              <h3 class="stat-number" data-count="15">0</h3>
+              <p class="stat-label">Projects Completed</p>
+            </div>
+            <div class="stat animate-slide-in delay-200">
+              <h3 class="stat-number" data-count="3">0</h3>
+              <p class="stat-label">Years of Study</p>
+            </div>
+            <div class="stat animate-slide-in delay-300">
+              <h3 class="stat-number" data-count="5">0</h3>
+              <p class="stat-label">Programming Languages</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills">
+          <h3>Core Competencies</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Statistical Analysis</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-robot"></i>
+              <span>Machine Learning</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-bar"></i>
+              <span>Data Visualization</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>Data Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/project-placeholder.svg" alt="Project 1">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View project demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" aria-label="View source code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Customer Segmentation Analysis</h3>
+            <p class="project-description">
+              Applied K-means clustering and RFM analysis to segment customers
+              for targeted marketing strategies, resulting in 25% improvement in campaign effectiveness.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/project-placeholder.svg" alt="Project 2">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View project demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" aria-label="View source code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Predictive Sales Forecasting</h3>
+            <p class="project-description">
+              Developed time series forecasting models using ARIMA and LSTM networks
+              to predict quarterly sales with 92% accuracy for retail chain optimization.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Time Series</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/project-placeholder.svg" alt="Project 3">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View project demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" aria-label="View source code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sentiment Analysis Dashboard</h3>
+            <p class="project-description">
+              Built real-time sentiment analysis dashboard for social media monitoring
+              using NLP techniques and interactive visualizations with Plotly Dash.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLTK</span>
+              <span class="tag">Dash</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Progress Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Academic Progress</h2>
+      <div class="academic-container">
+        <div class="year-category">
+          <h3 class="year-title">
+            <i class="fas fa-graduation-cap"></i>
+            Year 1
+          </h3>
+
+          <div class="semester-block">
+            <h4 class="semester-title">Semester 1</h4>
+            <div class="unit-list">
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS1003</span>
+                  <span class="unit-name">Introduction to Cybersecurity</span>
+                </div>
+              </div>
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS1401</span>
+                  <span class="unit-name">Computational Thinking Python</span>
+                </div>
+              </div>
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS1402</span>
+                  <span class="unit-name">Relational Database Management Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="semester-block">
+            <h4 class="semester-title">Semester 2</h4>
+            <div class="unit-list">
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">GENG1010</span>
+                  <span class="unit-name">Introduction to Engineering</span>
+                </div>
+              </div>
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">ELECT1303</span>
+                  <span class="unit-name">Digital Systems</span>
+                </div>
+              </div>
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">PHYS1030</span>
+                  <span class="unit-name">Physics Bridging Unit</span>
+                </div>
+              </div>
+              <div class="unit-item completed">
+                <i class="fas fa-check-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">STAT2402</span>
+                  <span class="unit-name">Analysis of Observations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-category">
+          <h3 class="year-title">
+            <i class="fas fa-graduation-cap"></i>
+            Year 2
+          </h3>
+
+          <div class="semester-block">
+            <h4 class="semester-title">Semester 1</h4>
+            <div class="unit-list">
+              <div class="unit-item current">
+                <i class="fas fa-play-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS2006</span>
+                  <span class="unit-name">Defensive Cybersecurity</span>
+                </div>
+              </div>
+              <div class="unit-item current">
+                <i class="fas fa-play-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS3403</span>
+                  <span class="unit-name">Agile Web Development</span>
+                </div>
+              </div>
+              <div class="unit-item current">
+                <i class="fas fa-play-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">ENGL2401</span>
+                  <span class="unit-name">Netflix: Cinema and Long-form Television</span>
+                </div>
+              </div>
+              <div class="unit-item current">
+                <i class="fas fa-play-circle"></i>
+                <div class="unit-info">
+                  <span class="unit-code">FINA1221</span>
+                  <span class="unit-name">Introduction to Finance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="semester-block">
+            <h4 class="semester-title">Semester 2</h4>
+            <div class="unit-list">
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS2002</span>
+                  <span class="unit-name">Systems Programming</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">STAT1400</span>
+                  <span class="unit-name">Statistics for Science</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS2402</span>
+                  <span class="unit-name">Introduction to Data Science</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">FINA1109</span>
+                  <span class="unit-name">Managing Your Personal Finance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-category">
+          <h3 class="year-title">
+            <i class="fas fa-graduation-cap"></i>
+            Year 3
+          </h3>
+
+          <div class="semester-block">
+            <h4 class="semester-title">Semester 1</h4>
+            <div class="unit-list">
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS3002</span>
+                  <span class="unit-name">Computer Networks</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS3007</span>
+                  <span class="unit-name">Secure Coding</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS3401</span>
+                  <span class="unit-name">Data Warehousing</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">STAT2401</span>
+                  <span class="unit-name">Analysis of Experiments</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="semester-block">
+            <h4 class="semester-title">Semester 2</h4>
+            <div class="unit-list">
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS3006</span>
+                  <span class="unit-name">Penetration Testing</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">CITS3200</span>
+                  <span class="unit-name">Professional Computing</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">STAT3064</span>
+                  <span class="unit-name">Statistical Learning</span>
+                </div>
+              </div>
+              <div class="unit-item upcoming">
+                <i class="fas fa-clock"></i>
+                <div class="unit-info">
+                  <span class="unit-code">STAT3405</span>
+                  <span class="unit-name">Introduction to Bayesian Computing and Statistics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-text">
+          <p class="contact-description">
+            I'm always interested in discussing new opportunities, collaborating on projects,
+            or simply connecting with fellow data enthusiasts. Feel free to reach out!
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Perth, WA</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>University of Western Australia</span>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Kaggle">
+            <i class="fab fa-kaggle"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Sepehr Moghani. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
