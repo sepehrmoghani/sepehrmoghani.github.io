@@ -1226,3 +1226,81 @@ body {
 .social-link {
     transform: translateZ(0);
 }
+
+.modern-contact-form {
+    background: hsl(var(--surface));
+    gap: var(--spacing-base);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 0.75rem 0.5rem 0.75rem;
+    border: 1.5px solid hsl(var(--border));
+    border-radius: var(--radius-base);
+    background: hsl(var(--background));
+    font-size: 1rem;
+    outline: none;
+    color: hsl(var(--text-primary));
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.form-input:focus {
+    border-color: hsl(var(--primary));
+    background: hsl(var(--surface));
+}
+
+.form-label {
+    position: absolute;
+    left: 0.75rem;
+    top: 1rem;
+    color: hsl(var(--text-muted));
+    font-size: 1rem;
+    pointer-events: none;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label,
+.form-input:not(:empty)+.form-label {
+    top: -0.7rem;
+    left: 0.5rem;
+    background: hsl(var(--surface));
+    padding: 0 0.25rem;
+    font-size: 0.85rem;
+    color: hsl(var(--primary));
+}
+
+.form-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-base);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-base);
+}
+
+.form-button:hover,
+.form-button:focus {
+    background: linear-gradient(90deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    box-shadow: var(--shadow-lg);
+}
