@@ -131,9 +131,6 @@
                 <a href="#" class="project-link" aria-label="View project demo">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
-                <a href="#" class="project-link" aria-label="View source code">
-                  <i class="fab fa-github"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -141,13 +138,8 @@
             <h3 class="project-title">BonyéAI - A Smart Nutrition Tracking App</h3>
             <p class="project-description">
               SnapCal is an AI-powered nutrition and wellness app designed to make food tracking faster and more intuitive. 
-              Users can log meals from photos, monitor daily nutrition and weight trends, 
-              sync activity data from Apple Health, and continue using core features even when offline. 
-              The app was built with Expo and React Native, using Expo Router for navigation, 
-              SQLite for offline-first data persistence, and Supabase for authentication, backend services, 
-              storage, and serverless functions. AI-powered meal recognition and nutrition 
-              estimation are delivered through a Gemini integration routed securely via 
-              Supabase Edge Functions, with iOS subscription billing integrated for premium access.
+              Users can log meals from photos, or text input, monitor daily nutrition and weight trends, get food scores,
+              sync activity data from Apple Health, and continue using core features even when offline.
             </p>
             <div class="project-tags">
               <span class="tag">Expo</span>
@@ -162,29 +154,45 @@
 
         <div class="project-card">
           <div class="project-image">
-            <img src="assets/project-placeholder.svg" alt="Project 2">
+            <img src="assets/Data_Warehouse_project.png" alt="Project 2">
             <div class="project-overlay">
               <div class="project-links">
                 <a href="#" class="project-link" aria-label="View project demo">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
-                <a href="#" class="project-link" aria-label="View source code">
+                <a href="https://www.kaggle.com/code/sepehrmoghani/data-warehouse-project-1" class="project-link" aria-label="View source code">
                   <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Predictive Sales Forecasting</h3>
+            <h3 class="project-title">Design and Implementation of a Dimensional Data Warehouse for Airline Passenger Analysis</h3>
             <p class="project-description">
-              Developed time series forecasting models using ARIMA and LSTM networks
-              to predict quarterly sales with 92% accuracy for retail chain optimization.
+              This project designs a dimensional data warehouse to analyse passenger flight activity 
+              using the provided airline datasets. The primary dataset contains detailed records of 
+              individual passenger flight movements, including departure dates, origin and destination airports, 
+              passenger information, and operational attributes.
+
+              The objective is to transform this transaction-level data into a 
+              structured star schema that supports multidimensional analysis. 
+              Using Kimball’s dimensional modelling methodology, the warehouse is designed to capture 
+              passenger flight events at the individual trip level while enabling flexible aggregation across time, 
+              geography, and passenger characteristics.
+
+              The resulting design supports analytical reporting such as passenger traffic trends, 
+              route performance, airport comparisons, and geographic travel patterns. 
+              By modelling the data at its most detailed level, the warehouse provides 
+              a scalable foundation for both operational and strategic analysis.
             </p>
             <div class="project-tags">
               <span class="tag">Python</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">Time Series</span>
               <span class="tag">SQL</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Kimball</span>
+              <span class="tag">Databricks</span>
+              <span class="tag">DW Schema</span>
+              <span class="tag">Starnet Model</span>
             </div>
           </div>
         </div>
