@@ -50,6 +50,7 @@
             gap: 20px;
             flex-wrap: wrap;
             justify-content: flex-end;
+            transition: all 0.3s ease;
         }
 
         .nav-links a {
@@ -214,50 +215,91 @@
             border-radius: 6px;
         }
 
+.container {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
         @media (max-width: 800px) {
             .two-column {
                 grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 700px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
+@media (max-width: 700px) {
 
-            .nav-links {
-                justify-content: flex-start;
-                gap: 15px;
-            }
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
 
-            h1 {
-                font-size: 30px;
-            }
+    /* Show hamburger */
+    .container {
+        display: inline-block;
+    }
 
-            h2 {
-                font-size: 24px;
-            }
-        }
+    /* Hide nav links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        width: 200px;
+    }
+
+    /* Show when active */
+    .nav-links.active {
+        display: flex;
+    }
+}
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-brand">
-            <div class="nav-name">Sepehr Moghani</div>
-            <div class="nav-subtitle">Data Analyst</div>
-        </div>
-        <div class="nav-links">
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<nav>
+    <div class="nav-brand">
+        <div class="nav-name">Sepehr Moghani</div>
+        <div class="nav-subtitle">Data Analyst</div>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="container" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
     <section id="about">
         <h2>About Me</h2>
@@ -572,7 +614,12 @@
     <footer>
         <p>&copy; 2026 Sepehr Moghani. All rights reserved.</p>
     </footer>
-
+<script>
+function toggleMenu(x) {
+    x.classList.toggle("change");
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 </body>
 
 </html>
