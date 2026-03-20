@@ -2,516 +2,579 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sepehr Moghani - Data Science</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepehr Moghani - Data Analyst Portfolio</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            color: #222;
+            background: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 0;
+            background: #fff;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .nav-name {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .nav-subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 21px;
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .hero {
+            padding: 20px 0 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .hero-links a {
+            color: #000;
+        }
+
+        .card {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .meta {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            margin-top: 10px;
+        }
+
+        .tags span {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 4px 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .skill-group {
+            margin-bottom: 20px;
+        }
+
+        .skill-group h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        form {
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font: inherit;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: auto;
+            cursor: pointer;
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 16px;
+        }
+
+        footer {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 0 0 auto;
+            max-width: 250px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 800px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="#home">Sepehr Moghani</a>
-      </div>
-      <div class="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#academic-progress" class="nav-link">Academic Progress</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title animate-fade-in-up">
-            Hi, I'm Sepehr
-          </h1>
-          <h2 class="hero-subtitle animate-fade-in-up delay-200">Data Analyst | Software Developer</h2>
-          <div class="hero-buttons animate-fade-in-up delay-400">
-            <a href="#about" class="btn btn-primary">About me</a>
-          </div>
+    <nav>
+        <div class="nav-brand">
+            <div class="nav-name">Sepehr Moghani</div>
+            <div class="nav-subtitle">Data Analyst</div>
         </div>
-        <div class="hero-image">
-          <img src="assets/profile.jpg" alt="Profile Picture" class="profile-img animate-float">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p class="about-description">
-            Data Analyst practitioner with experience designing, building, 
-            and optimising data-driven systems across operational environments. 
-            Strong background in SQL, Python, and relational database design, 
-            with hands-on experience developing ETL workflows, integrating multi-source datasets, 
-            and transforming raw data into reliable analytical assets.
-          </p>
-          <p class="about-description">
-            Experienced in building structured reporting solutions, developing backend data applications, 
-            and implementing validation and governance controls to ensure data accuracy and consistency. 
-            Proficient in Power BI, advanced Excel, and dashboard development, 
-            translating complex datasets into clear insights that support operational efficiency and strategic decision-making.
-          </p>
-          <p class="about-description">
-            Technically grounded in scalable data architecture, 
-            REST API development, PostgreSQL database design, and Docker-based deployment. 
-            Combines analytical investigation skills with engineering discipline to bridge 
-            the gap between raw data ingestion and actionable intelligence delivery.
-          </p>
-          <div class="about-stats">
-            <div class="stat animate-slide-in delay-100">
-              <h3 class="stat-number" data-count="10">0</h3>
-              <p class="stat-label">Projects Completed</p>
-            </div>
-            <div class="stat animate-slide-in delay-200">
-              <h3 class="stat-number" data-count="3">0</h3>
-              <p class="stat-label">Years of Study</p>
-            </div>
-            <div class="stat animate-slide-in delay-300">
-              <h3 class="stat-number" data-count="3">0</h3>
-              <p class="stat-label">Programming Languages</p>
-            </div>
-          </div>
-        </div>
-        <div class="about-skills">
-          <h3>Core Competencies</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <i class="fas fa-chart-line"></i>
-              <span>Statistical Analysis</span>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-robot"></i>
-              <span>Machine Learning</span>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-chart-bar"></i>
-              <span>Data Visualization</span>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-database"></i>
-              <span>Data Engineering</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="about">
+        <h2>About Me</h2>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="assets/paywall-hero.png" alt="Project 1">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="#" class="project-link" aria-label="View project demo">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    I am a Perth-based data professional with hands-on experience in analytics, reporting,
+                    data validation, and operational systems. I have worked across logistics, production,
+                    and business operations, using data to identify patterns, investigate issues, improve
+                    reporting quality, and support better decision-making.
+                </p>
+
+                <p>
+                    My background combines data analysis with practical technical development. I have built
+                    Power BI dashboards, written SQL queries for complex operational analysis, used Python
+                    for data processing and reconciliation, designed PostgreSQL database structures, and
+                    developed internal web tools to support pricing, validation, and workflow efficiency.
+                </p>
+
+                <p>
+                    I am currently completing a Bachelor of Science in Data Science and Cybersecurity at
+                    The University of Western Australia. I am targeting roles in data analytics, business
+                    intelligence, reporting, and entry-level data engineering where I can contribute with
+                    strong technical execution, business understanding, and a focus on accuracy and useful outcomes.
+                </p>
             </div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">BonyéAI - A Smart Nutrition Tracking App</h3>
-            <p class="project-description">
-              SnapCal is an AI-powered nutrition and wellness app designed to make food tracking faster and more intuitive. 
-              Users can log meals from photos, or text input, monitor daily nutrition and weight trends, get food scores,
-              sync activity data from Apple Health, and continue using core features even when offline.
+
+            <div class="about-image">
+                <img src="IMG_6312.jpeg" alt="Sepehr Moghani">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="card">
+            <h3>Software Developer (Contract) - Transfreight Solutions Australia</h3>
+            <p class="meta">Perth, WA | November 2025 - Current</p>
+            <ul>
+                <li>Designed and developed a secure internal web application to support freight reconciliation and
+                    pricing validation workflows.</li>
+                <li>Built backend functionality using Python, Flask, REST APIs, and PostgreSQL.</li>
+                <li>Implemented automated validation logic to detect pricing inconsistencies, service mismatches, and
+                    workflow exceptions.</li>
+                <li>Created structured upload, comparison, and reporting functionality for operational users.</li>
+                <li>Containerised the application with Docker for consistent deployment and environment management.</li>
+                <li>Worked with operations and finance stakeholders to translate business rules into scalable technical
+                    solutions.</li>
+            </ul>
+            <div class="tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>PostgreSQL</span>
+                <span>REST API</span>
+                <span>Docker</span>
+                <span>Validation Logic</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Data Analyst - Transfreight Solutions Australia</h3>
+            <p class="meta">Perth, WA | August 2023 - June 2025</p>
+            <ul>
+                <li>Analysed high-volume operational and freight datasets from internal systems, carriers, and external
+                    sources.</li>
+                <li>Used SQL, Python, Excel, and Power BI to investigate delivery delays, invoice discrepancies,
+                    service-level breaches, and cost anomalies.</li>
+                <li>Built dashboards and structured analytical reports for management and operational teams.</li>
+                <li>Identified patterns, recurring issues, and performance risks to support proactive business
+                    decisions.</li>
+                <li>Maintained reporting accuracy, governance controls, and structured data handling practices.</li>
+                <li>Collaborated with operations, finance, and external partners to validate findings and improve
+                    reporting outputs.</li>
+            </ul>
+            <div class="tags">
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>Reporting</span>
+                <span>Root Cause Analysis</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Scheduler - Indeko Curtain and Blind Studio</h3>
+            <p class="meta">Perth, WA | December 2021 - August 2023</p>
+            <ul>
+                <li>Managed scheduling across orders, production, delivery, and installation activities.</li>
+                <li>Developed Excel-based tracking and dashboard tools to monitor order and workflow status.</li>
+                <li>Identified bottlenecks and scheduling conflicts through structured reporting and process visibility.
+                </li>
+                <li>Supported management with data-driven insights for workload and resource planning.</li>
+            </ul>
+            <div class="tags">
+                <span>Excel</span>
+                <span>Scheduling</span>
+                <span>Operations Reporting</span>
+                <span>Workflow Analysis</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Data Analyst - Hadron Tavan Co</h3>
+            <p class="meta">Tehran, Iran | October 2014 - September 2016</p>
+            <ul>
+                <li>Analysed operational and production datasets using SQL and advanced Excel.</li>
+                <li>Integrated and consolidated data from multiple sources for structured performance reviews.</li>
+                <li>Prepared analytical summaries for engineering, operations, and product teams.</li>
+                <li>Monitored production indicators and highlighted deviations and anomalies affecting quality and
+                    performance.</li>
+            </ul>
+            <div class="tags">
+                <span>SQL</span>
+                <span>Advanced Excel</span>
+                <span>Data Analysis</span>
+                <span>Operational Reporting</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Freight Reconciliation and Pricing Validation Platform</h3>
+            <p>
+                Built an internal web-based system for freight data reconciliation, pricing checks,
+                and operational validation. The platform supports structured uploads, data comparison,
+                exception handling, and reporting to reduce manual effort and improve control over
+                pricing and invoice validation workflows.
             </p>
-            <div class="project-tags">
-              <span class="tag">Expo</span>
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Supabase</span>
-              <span class="tag">JavaScript</span>
+            <div class="tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>PostgreSQL</span>
+                <span>REST API</span>
+                <span>Docker</span>
+                <span>Data Validation</span>
             </div>
-          </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-image">
-            <img src="assets/Data_Warehouse_project.png" alt="Project 2">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://www.kaggle.com/code/sepehrmoghani/data-warehouse-project-1" class="project-link" aria-label="View source code">
-                  <i class="fab fa-kaggle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Design and Implementation of a Dimensional Data Warehouse for Airline Passenger Analysis</h3>
-            <p class="project-description">
-              This project designs a dimensional data warehouse to analyse passenger flight activity 
-              using the provided airline datasets. The primary dataset contains detailed records of 
-              individual passenger flight movements, including departure dates, origin and destination airports, 
-              passenger information, and operational attributes.
-
-              The objective is to transform this transaction-level data into a 
-              structured star schema that supports multidimensional analysis. 
-              Using Kimball’s dimensional modelling methodology, the warehouse is designed to capture 
-              passenger flight events at the individual trip level while enabling flexible aggregation across time, 
-              geography, and passenger characteristics.
-
-              The resulting design supports analytical reporting such as passenger traffic trends, 
-              route performance, airport comparisons, and geographic travel patterns. 
-              By modelling the data at its most detailed level, the warehouse provides 
-              a scalable foundation for both operational and strategic analysis.
+        <div class="card">
+            <h3>Logistics Analytics and Operational Reporting</h3>
+            <p>
+                Developed reporting and dashboard solutions for freight operations using SQL,
+                Python, Excel, and Power BI. This work focused on identifying service-level issues,
+                delivery delays, invoice discrepancies, and cost anomalies, helping management make
+                faster and more informed operational decisions.
             </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">ETL</span>
-              <span class="tag">Kimball</span>
-              <span class="tag">Databricks</span>
-              <span class="tag">DW Schema</span>
-              <span class="tag">Starnet Model</span>
+            <div class="tags">
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>Python</span>
+                <span>Excel</span>
+                <span>Dashboarding</span>
+                <span>KPI Reporting</span>
             </div>
-          </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-image">
-            <img src="assets/project-placeholder.svg" alt="Project 3">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="#" class="project-link" aria-label="View project demo">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-                <a href="#" class="project-link" aria-label="View source code">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">third project placeholder</h3>
-            <p class="project-description">
-              
+        <div class="card">
+            <h3>Dimensional Data Warehouse for Airline Passenger Analysis</h3>
+            <p>
+                Designed and implemented a dimensional data warehouse for airline passenger analysis
+                using Kimball modelling principles. Built a structured star schema and ETL workflow
+                to transform transaction-level records into analysis-ready datasets for route,
+                airport, and passenger trend reporting.
             </p>
-            <div class="project-tags">
-              <span class="tag"></span>
-              <span class="tag"></span>
-              <span class="tag"></span>
-              <span class="tag"></span>
+            <p>
+                <a href="https://www.kaggle.com/code/sepehrmoghani/data-warehouse-project-1" target="_blank"
+                    rel="noopener">
+                    View project
+                </a>
+            </p>
+            <div class="tags">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>ETL</span>
+                <span>Data Warehouse</span>
+                <span>Kimball</span>
+                <span>Dimensional Modelling</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academic Progress Section -->
-  <section id="academic-progress" class="academic-progress">
-    <div class="container">
-      <h2 class="section-title">Academic Progress</h2>
-      <div class="academic-container">
-        <div class="year-category">
-          <h3 class="year-title">
-            <i class="fas fa-graduation-cap"></i>
-            Year 1
-          </h3>
-
-          <div class="semester-block">
-            <h4 class="semester-title">Semester 1</h4>
-            <div class="unit-list">
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS1003" target="_blank" rel="noopener">CITS1003</a>
-                  <span class="unit-name">Introduction to Cybersecurity</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS1401" target="_blank" rel="noopener">CITS1401</a>
-                  <span class="unit-name">Computational Thinking Python</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS1402" target="_blank" rel="noopener">CITS1402</a>
-                  <span class="unit-name">Relational Database Management Systems</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="semester-block">
-            <h4 class="semester-title">Semester 2</h4>
-            <div class="unit-list">
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=GENG1010" target="_blank" rel="noopener">GENG1010</a>
-                  <span class="unit-name">Introduction to Engineering</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=ELEC1303" target="_blank" rel="noopener">ELEC1303</a>
-                  <span class="unit-name">Digital Systems</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=PHYS1030" target="_blank" rel="noopener">PHYS1030</a>
-                  <span class="unit-name">Physics Bridging Unit</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=STAT2402" target="_blank" rel="noopener">STAT2402</a>
-                  <span class="unit-name">Analysis of Observations</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="year-category">
-          <h3 class="year-title">
-            <i class="fas fa-graduation-cap"></i>
-            Year 2
-          </h3>
-
-          <div class="semester-block">
-            <h4 class="semester-title">Semester 1</h4>
-            <div class="unit-list">
-              <div class="unit-item completed">
-                <i class="fas fa-play-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS2006" target="_blank" rel="noopener">CITS2006</a>
-                  <span class="unit-name">Defensive Cybersecurity</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-play-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS3403" target="_blank" rel="noopener">CITS3403</a>
-                  <span class="unit-name">Agile Web Development</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-play-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=ENGL2401" target="_blank" rel="noopener">ENGL2401</a>
-                  <span class="unit-name">Netflix: Cinema and Long-form Television</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-play-circle"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=FINA1221" target="_blank" rel="noopener">FINA1221</a>
-                  <span class="unit-name">Introduction to Finance</span>
-                </div>
-              </div>
+        <div class="card">
+            <h3>AI-Powered Nutrition Tracking App</h3>
+            <p>
+                Developed a nutrition and wellness app concept that combines structured data,
+                user input, and AI-assisted workflows. The project demonstrates full-stack product
+                thinking, schema design, application logic, and data handling across a modern web/mobile stack.
+            </p>
+            <div class="tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Supabase</span>
+                <span>SQL</span>
+                <span>App Development</span>
             </div>
-          </div>
+        </div>
+    </section>
 
-          <div class="semester-block">
-            <h4 class="semester-title">Semester 2</h4>
-            <div class="unit-list">
-              <div class="unit-item completed">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS2002" target="_blank" rel="noopener">CITS2002</a>
-                  <span class="unit-name">Systems Programming</span>
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="two-column">
+            <div>
+                <div class="skill-group">
+                    <h3>Analytics & Reporting</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>Excel (advanced formulas, structured reporting)</li>
+                        <li>Power BI</li>
+                        <li>Python (pandas, NumPy)</li>
+                        <li>R</li>
+                        <li>Dashboard development</li>
+                    </ul>
                 </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=STAT1400" target="_blank" rel="noopener">STAT1400</a>
-                  <span class="unit-name">Statistics for Science</span>
+
+                <div class="skill-group">
+                    <h3>Data Engineering Foundations</h3>
+                    <ul>
+                        <li>ETL workflows</li>
+                        <li>Data transformation and validation</li>
+                        <li>Data normalisation</li>
+                        <li>Relational database design</li>
+                        <li>PostgreSQL</li>
+                        <li>API-based data integration</li>
+                    </ul>
                 </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS2402" target="_blank" rel="noopener">CITS2402</a>
-                  <span class="unit-name">Introduction to Data Science</span>
-                </div>
-              </div>
-              <div class="unit-item completed">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=FINA1109" target="_blank" rel="noopener">FINA1109</a>
-                  <span class="unit-name">Managing Your Personal Finance</span>
-                </div>
-              </div>
             </div>
-          </div>
+
+            <div>
+                <div class="skill-group">
+                    <h3>Development & Tools</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>REST APIs</li>
+                        <li>Docker</li>
+                        <li>Git and GitHub</li>
+                        <li>Basic Tableau</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Business & Operational Strengths</h3>
+                    <ul>
+                        <li>Analytical investigation</li>
+                        <li>Root cause analysis</li>
+                        <li>Data governance and validation</li>
+                        <li>Stakeholder collaboration</li>
+                        <li>Process improvement</li>
+                        <li>Structured problem solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="card">
+            <h3>Bachelor of Science - Data Science and Cybersecurity</h3>
+            <p class="meta">The University of Western Australia | 2022 - Expected 2026</p>
+            <p>
+                Relevant areas of study include data science, data warehousing, statistics,
+                cybersecurity, systems programming, networks, machine learning, and secure coding.
+            </p>
         </div>
 
-        <div class="year-category">
-          <h3 class="year-title">
-            <i class="fas fa-graduation-cap"></i>
-            Year 3
-          </h3>
-
-          <div class="semester-block">
-            <h4 class="semester-title">Semester 1</h4>
-            <div class="unit-list">
-              <div class="unit-item current">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS3002" target="_blank" rel="noopener">CITS3002</a>
-                  <span class="unit-name">Computer Networks</span>
-                </div>
-              </div>
-              <div class="unit-item current">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS3007" target="_blank" rel="noopener">CITS3007</a>
-                  <span class="unit-name">Secure Coding</span>
-                </div>
-              </div>
-              <div class="unit-item current">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS3401" target="_blank" rel="noopener">CITS3401</a>
-                  <span class="unit-name">Data Warehousing</span>
-                </div>
-              </div>
-              <div class="unit-item current">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=STAT2401" target="_blank" rel="noopener">STAT2401</a>
-                  <span class="unit-name">Analysis of Experiments</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="semester-block">
-            <h4 class="semester-title">Semester 2</h4>
-            <div class="unit-list">
-              <div class="unit-item upcoming">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS3006" target="_blank" rel="noopener">CITS3006</a>
-                  <span class="unit-name">Penetration Testing</span>
-                </div>
-              </div>
-              <div class="unit-item upcoming">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=CITS3200" target="_blank" rel="noopener">CITS3200</a>
-                  <span class="unit-name">Professional Computing</span>
-                </div>
-              </div>
-              <div class="unit-item upcoming">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=STAT3064" target="_blank" rel="noopener">STAT3064</a>
-                  <span class="unit-name">Statistical Learning</span>
-                </div>
-              </div>
-              <div class="unit-item upcoming">
-                <i class="fas fa-clock"></i>
-                <div class="unit-info">
-                  <a class="unit-code" href="https://handbooks.uwa.edu.au/unitdetails?code=STAT3405" target="_blank" rel="noopener">STAT3405</a>
-                  <span class="unit-name">Introduction to Bayesian Computing and Statistics</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="card">
+            <h3>Bachelor of Computer Science</h3>
+            <p class="meta">The University of Parand | 2011 - 2016</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-content">
-        <div class="contact-text">
-          <p class="contact-description">
-            I'm always interested in discussing new opportunities, collaborating on projects,
-            or simply connecting with fellow data enthusiasts. Feel free to reach out!
-          </p>
-          <div class="contact-info">
-              <form action="https://formspree.io/f/mrbqnlon" method="POST" class="modern-contact-form">
-                <div class="form-group">
-                  <input type="text" id="name" name="name" class="form-input" required>
-                  <label for="name" class="form-label">Your Name</label>
-                </div>
-                <div class="form-group">
-                  <input type="email" id="email" name="email" class="form-input" required>
-                  <label for="email" class="form-label">Your Email</label>
-                  <p style="font-size: small;">This will help me respond to your query via an email.</p>
-                </div>
-                <div class="form-group">
-                  <textarea id="message" name="message" class="form-input" rows="4" required></textarea>
-                  <label for="message" class="form-label">Message</label>
-                </div>
-                <button type="submit" class="form-button">Submit</button>
-              </form>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Perth, WA</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-graduation-cap"></i>
-              <span>University of Western Australia</span>
-            </div>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="https://github.com/sepehrmoghani" class="social-link" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/sepehr-moghani/" class="social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.kaggle.com/sepehrmoghani" class="social-link" aria-label="Kaggle">
-            <i class="fab fa-kaggle"></i>
-          </a>
-          <a href="https://x.com/Sepehr__" class="social-link" aria-label="X">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            I am open to opportunities in data analytics, business intelligence, reporting,
+            operations analysis, and junior data engineering roles across Australia.
+        </p>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Sepehr Moghani. All rights reserved.</p>
-    </div>
-  </footer>
+        <form action="https://formspree.io/f/mrbqnlon" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://github.com/sepehrmoghani" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/sepehr-moghani/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.kaggle.com/sepehrmoghani" target="_blank" rel="noopener">Kaggle</a></li>
+            <li><a href="https://x.com/Sepehr__" target="_blank" rel="noopener">X</a></li>
+        </ul>
+
+        <p>Email: sepehr.moghani@gmail.com</p>
+        <p>Location: Perth, WA, Australia</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sepehr Moghani. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
